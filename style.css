@@ -1,0 +1,137 @@
+/* === Global Reset === */
+* {margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
+body {background:#fff;color:#333;line-height:1.6;scroll-behavior:smooth;}
+a {text-decoration:none;}
+
+/* === Header & Navigation === */
+header {position:fixed;width:100%;background:rgba(0,0,0,0.85);padding:15px 0;z-index:999;}
+nav {max-width:1300px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 25px;}
+nav h1 {color:#e84a27;font-size:2rem;font-weight:700;letter-spacing:2px;}
+nav ul {list-style:none;display:flex;gap:25px;}
+nav ul li a {color:#fff;font-weight:500;transition:0.3s;}
+nav ul li a:hover, nav ul li a.active {color:#e84a27;}
+
+/* === Hero === */
+.hero {height:90vh;background:#333;display:flex;justify-content:center;align-items:center;text-align:center;position:relative;color:#fff;}
+.hero-content {animation:fadeIn 1.5s ease-in-out;}
+.hero-content h2 {font-size:3rem;margin-bottom:15px;font-weight:800;}
+.hero-content p {font-size:1.15rem;margin-bottom:20px;}
+.hero-content a {padding:12px 30px;background:#e84a27;color:#fff;border-radius:30px;font-weight:600;transition:0.3s;}
+.hero-content a:hover {background:#d63b1d;}
+
+/* === Sections === */
+section {padding:70px 20px;}
+.section-title {text-align:center;color:#e84a27;font-size:2.4rem;font-weight:700;margin-bottom:25px;position:relative;}
+.section-title::after {content:"";display:block;width:60px;height:4px;background:#e84a27;margin:7px auto 0;}
+
+/* === About === */
+.about {display:flex;flex-wrap:wrap;gap:40px;justify-content:center;}
+.about .content p {margin-bottom:12px;font-size:1rem;color:#555;}
+
+/* === Menu === */
+.menu {display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px;}
+.menu-item {background:#fff;border-radius:12px;padding:15px;box-shadow:0 12px 22px rgba(0,0,0,0.15);transition:0.3s;transform:scale(0.98);}
+.menu-item:hover {transform:scale(1.03);box-shadow:0 20px 35px rgba(0,0,0,0.25);}
+.menu-placeholder {height:180px;background:#ddd;border-radius:10px;margin-bottom:10px;display:flex;justify-content:center;align-items:center;color:#999;font-weight:700;}
+/* === View Full Menu Button === */
+#home-menu {
+  display: inline-block;
+  padding: 14px 32px;           /* Larger, clickable area */
+  background-color: #e84a27;    /* Brand accent */
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(232, 74, 39, 0.4);
+  cursor: pointer;
+  text-align: center;
+}
+
+#home-menu:hover {
+  background-color: #d63b1d;           /* Darker on hover */
+  transform: translateY(-3px) scale(1.05); /* Slight lift & scale */
+  box-shadow: 0 8px 20px rgba(232, 74, 39, 0.6);
+}
+
+#home-menu:active {
+  transform: translateY(0) scale(1);
+  box-shadow: 0 4px 12px rgba(232, 74, 39, 0.4);
+}
+
+/* === Location === */
+.location {text-align:center;}
+.location iframe {width:100%;height:400px;border:none;border-radius:15px;margin-bottom:15px;}
+
+/* === Contact Form === */
+.contact-form {max-width:650px;margin:auto;}
+.contact-form input, .contact-form textarea {width:100%;padding:14px;margin-bottom:15px;border:2px solid #e84a27;border-radius:8px;outline:none;transition:0.3s;}
+.contact-form input:focus, .contact-form textarea:focus {border-color:#d63b1d;}
+.contact-form button {padding:14px 30px;background:#e84a27;color:#fff;border-radius:30px;font-weight:bold;cursor:pointer;transition:0.3s;}
+.contact-form button:hover {background:#d63b1d;}
+#formMessage{text-align:center;margin-top:10px;font-weight:600;}
+
+/* === Footer === */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 50px 20px 20px 20px;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.footer-section h3 {
+  color: #e84a27;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.footer-section p, .footer-section a {
+  color: #fff;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #e84a27;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* === Featured Foods Section === */
+#featured-foods {
+  padding: 70px 20px;
+}
+
+#featured-foods .menu-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#featured-foods .menu-item:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Home menu button already styled as #home-menu */
+
+
+/* === Animations === */
+@keyframes fadeIn {from{opacity:0;transform:translateY(25px);} to{opacity:1;transform:translateY(0);}}
+
+/* === Responsive === */
+@media(max-width:768px){.hero-content h2{font-size:2.2rem;} nav h1{font-size:1.6rem;}}
